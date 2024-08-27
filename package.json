@@ -9,6 +9,7 @@
   "author": "James Craig",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.14.0"
+    "cypress": "^13.14.0",
+    "electron": "^32.0.1"
   }
 }
