@@ -8,7 +8,8 @@
 /dataSources.local.xml
 
 node_modules
-*-lock.json
+/cypress/downloads/
+/package-lock.json
 *.log
 *.aes
 cypress/screenshots
