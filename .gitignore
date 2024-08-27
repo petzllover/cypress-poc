@@ -9,7 +9,6 @@
 
 node_modules
 /cypress/downloads/
-/package-lock.json
 *.log
 *.aes
 cypress/screenshots
