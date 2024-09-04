@@ -14,7 +14,7 @@ module.exports = defineConfig({
       framework: "angular",
       bundler: "webpack",
     },
-    specPattern: "**/login.cy.ts",
+    specPattern: "**/initial_tests.cy.ts",
   },
 
   projectId: "4m261g",

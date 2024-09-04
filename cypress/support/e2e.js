@@ -18,3 +18,20 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+const password = Cypress.env('password')
+const environment = Cypress.env('environment')
+
+Cypress.config('defaultCommandTimeout', 20000);
+beforeEach(() => {
+    cy.visit('https://' + environment)
+    cy.get('#login-email')
+        .type('james.craig+1@bellrocktechnology.com').should('have.value', 'james.craig+1@bellrocktechnology.com')
+    cy.get('#next-button').click()
+    cy.get('#password').type(password,{ parseSpecialCharSequences: false })
+    cy.get('#login-button').click()
+    cy.get('header').should('exist')
+    cy.location().then((location) => {
+        cy.end()
+    })
+})
